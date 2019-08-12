@@ -1,0 +1,25 @@
+<resources>
+    <string name="app_name">AssignmentChuyennt</string>
+    <string name="navigation_drawer_open">Open navigation drawer</string>
+    <string name="navigation_drawer_close">Close navigation drawer</string>
+    <string name="nav_header_title">Android Studio</string>
+    <string name="nav_header_subtitle">Amazing Wallpaper in your way</string>
+    <string name="nav_header_desc">Navigation header</string>
+    <string name="action_settings">Settings</string>
+
+    <string name="menu_home">Latest</string>
+    <string name="menu_category">Category</string>
+    <string name="menu_gif">GIFs</string>
+    <string name="menu_my_favorite">Favorites</string>
+    <string name="menu_rate_app">Rate App</string>
+    <string name="menu_more">More App</string>
+    <string name="menu_about">About Us</string>
+    <string name="menu_setting">Setting</string>
+    <string name="menu_privacy">Privacy Police</string>
+
+    <string name="title_Latest">Latest</string>
+    <string name="title_MyFavorites">My Favorites</string>
+    <string name="title_Category">Categories</string>
+    <string name="title_AboutUs">About Us</string>
+    <string name="title_Image_Detail">Image Detail</string>
+</resources>

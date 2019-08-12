@@ -1,0 +1,92 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".ui.imagedetail.ImageDetailActivity">
+
+    <android.support.v7.widget.Toolbar
+        android:id="@+id/toolbar_imageDetail"
+        android:layout_width="match_parent"
+        android:layout_height="?attr/actionBarSize"
+        android:background="@color/colorPrimary">
+
+        <ImageView
+            android:id="@+id/img_backActivity"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:clickable="true"
+            android:foreground="?attr/selectableItemBackground"
+            android:paddingTop="@dimen/dp_8"
+            android:paddingRight="@dimen/dp_8"
+            android:paddingBottom="@dimen/dp_8"
+            android:src="@drawable/ic_arrow_white_24dp" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="@dimen/dp_44"
+            android:text="@string/title_Image_Detail"
+            android:textColor="@color/white"
+            android:textSize="@dimen/sp_18" />
+
+    </android.support.v7.widget.Toolbar>
+
+    <ImageView
+        android:id="@+id/img_detailImage"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_below="@id/toolbar_imageDetail"
+        android:layout_margin="@dimen/dp_8" />
+
+    <com.getbase.floatingactionbutton.FloatingActionsMenu
+        android:id="@+id/fab_optionImageDetail"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentRight="true"
+        android:layout_alignParentBottom="true"
+        android:layout_margin="@dimen/dp_18"
+        app:fab_addButtonColorNormal="#2b98a2"
+        app:fab_addButtonColorPressed="#5C5151"
+        app:fab_addButtonPlusIconColor="#ffffff"
+        app:fab_labelStyle="@style/custom_fab">
+
+        <com.getbase.floatingactionbutton.FloatingActionButton
+            android:id="@+id/action4"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            app:fab_colorNormal="#C8000000"
+            app:fab_icon="@drawable/ic_favorite_white_24dp"
+            app:fab_size="mini" />
+
+        <com.getbase.floatingactionbutton.FloatingActionButton
+            android:id="@+id/action3"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            app:fab_colorNormal="#C8000000"
+            app:fab_icon="@drawable/ic_share_white_24dp"
+            app:fab_size="mini"
+            app:fab_title="Share" />
+
+        <com.getbase.floatingactionbutton.FloatingActionButton
+            android:id="@+id/action2"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            app:fab_colorNormal="#C8000000"
+            app:fab_icon="@drawable/ic_save_white_24dp"
+            app:fab_size="mini"
+            app:fab_title="Save Image" />
+
+        <com.getbase.floatingactionbutton.FloatingActionButton
+            android:id="@+id/action1"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            app:fab_colorNormal="#C8000000"
+            app:fab_icon="@drawable/ic_wallpaper_white_24dp"
+            app:fab_size="mini"
+            app:fab_title="Set As Wallpaper" />
+
+    </com.getbase.floatingactionbutton.FloatingActionsMenu>
+
+</RelativeLayout>

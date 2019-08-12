@@ -1,0 +1,296 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    tools:context=".ui.aboutus.AboutUsActivity">
+
+    <android.support.v7.widget.Toolbar
+        android:layout_width="match_parent"
+        android:layout_height="?attr/actionBarSize"
+        android:layout_marginBottom="@dimen/dp_16"
+        android:background="@color/colorPrimary">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:gravity="center_vertical"
+            android:orientation="horizontal">
+
+            <ImageView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:clickable="true"
+                android:foreground="?attr/selectableItemBackground"
+                android:onClick="backActivity"
+                android:paddingRight="@dimen/dp_8"
+                android:paddingTop="@dimen/dp_8"
+                android:paddingBottom="@dimen/dp_8"
+                android:src="@drawable/ic_arrow_back_white_24dp" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="@dimen/dp_36"
+                android:text="About Us"
+                android:textColor="@color/white"
+                android:textSize="@dimen/sp_18" />
+        </LinearLayout>
+
+    </android.support.v7.widget.Toolbar>
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:paddingLeft="@dimen/dp_12"
+        android:paddingRight="@dimen/dp_12"
+        android:paddingBottom="@dimen/dp_12">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical">
+
+            <android.support.v7.widget.CardView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:orientation="vertical"
+                    android:padding="@dimen/dp_14">
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="@dimen/dp_2"
+                        android:layout_marginBottom="@dimen/dp_10"
+                        android:gravity="center_vertical"
+                        android:orientation="horizontal">
+
+                        <ImageView
+                            android:layout_width="@dimen/dp_40"
+                            android:layout_height="@dimen/dp_40"
+                            android:src="@drawable/icon80" />
+
+                        <TextView
+                            style="@style/font_Regular_Medium"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_marginLeft="@dimen/dp_16"
+                            android:text="HD Wallpaper" />
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="@dimen/dp_10"
+                        android:layout_marginBottom="@dimen/dp_2"
+                        android:gravity="center_vertical"
+                        android:orientation="horizontal">
+
+                        <ImageView
+                            android:layout_width="@dimen/dp_24"
+                            android:layout_height="@dimen/dp_24"
+                            android:src="@drawable/ic_info_gray_24dp" />
+
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_marginLeft="@dimen/dp_16"
+                            android:gravity="center_vertical"
+                            android:orientation="vertical">
+
+                            <TextView
+                                style="@style/font_Regular_Small"
+                                android:text="Version" />
+
+                            <TextView
+                                style="@style/font_Regular_Small"
+                                android:text="2.1.5(1020)"
+                                android:textColor="@color/gray" />
+                        </LinearLayout>
+
+                    </LinearLayout>
+                </LinearLayout>
+            </android.support.v7.widget.CardView>
+
+            <android.support.v7.widget.CardView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/dp_12">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:orientation="vertical"
+                    android:padding="@dimen/dp_14">
+
+                    <TextView
+                        style="@style/font_Regular_Medium"
+                        android:layout_marginTop="@dimen/dp_4"
+                        android:layout_marginBottom="@dimen/dp_12"
+                        android:text="Author" />
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="@dimen/dp_16"
+                        android:layout_marginBottom="@dimen/dp_2"
+                        android:gravity="center_vertical"
+                        android:orientation="horizontal">
+
+                        <ImageView
+                            android:layout_width="@dimen/dp_24"
+                            android:layout_height="@dimen/dp_24"
+                            android:src="@drawable/ic_person_gray_24dp" />
+
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_marginLeft="@dimen/dp_16"
+                            android:gravity="center_vertical"
+                            android:orientation="vertical">
+
+                            <TextView
+                                style="@style/font_Regular_Small"
+                                android:text="Company" />
+
+                            <TextView
+                                style="@style/font_Regular_Small"
+                                android:text="Viavi Webtech"
+                                android:textColor="@color/gray" />
+                        </LinearLayout>
+
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="@dimen/dp_16"
+                        android:layout_marginBottom="@dimen/dp_2"
+                        android:gravity="center_vertical"
+                        android:orientation="horizontal">
+
+                        <ImageView
+                            android:layout_width="@dimen/dp_24"
+                            android:layout_height="@dimen/dp_24"
+                            android:src="@drawable/ic_email_gray_24dp" />
+
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_marginLeft="@dimen/dp_16"
+                            android:gravity="center_vertical"
+                            android:orientation="vertical">
+
+                            <TextView
+                                style="@style/font_Regular_Small"
+                                android:text="Email" />
+
+                            <TextView
+                                style="@style/font_Regular_Small"
+                                android:text="info@viaviweb.com"
+                                android:textColor="@color/gray" />
+                        </LinearLayout>
+
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="@dimen/dp_16"
+                        android:layout_marginBottom="@dimen/dp_2"
+                        android:gravity="center_vertical"
+                        android:orientation="horizontal">
+
+                        <ImageView
+                            android:layout_width="@dimen/dp_24"
+                            android:layout_height="@dimen/dp_24"
+                            android:src="@drawable/ic_web_24dp" />
+
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_marginLeft="@dimen/dp_16"
+                            android:gravity="center_vertical"
+                            android:orientation="vertical">
+
+                            <TextView
+                                style="@style/font_Regular_Small"
+                                android:text="Website" />
+
+                            <TextView
+                                style="@style/font_Regular_Small"
+                                android:text="www.viaviweb.com"
+                                android:textColor="@color/gray" />
+                        </LinearLayout>
+
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="@dimen/dp_16"
+                        android:layout_marginBottom="@dimen/dp_2"
+                        android:gravity="center_vertical"
+                        android:orientation="horizontal">
+
+                        <ImageView
+                            android:layout_width="@dimen/dp_24"
+                            android:layout_height="@dimen/dp_24"
+                            android:src="@drawable/ic_phone_gray_24dp" />
+
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_marginLeft="@dimen/dp_16"
+                            android:gravity="center_vertical"
+                            android:orientation="vertical">
+
+                            <TextView
+                                style="@style/font_Regular_Small"
+                                android:text="Contact" />
+
+                            <TextView
+                                style="@style/font_Regular_Small"
+                                android:text="+91(123)(456)(789)"
+                                android:textColor="@color/gray" />
+                        </LinearLayout>
+
+                    </LinearLayout>
+
+                </LinearLayout>
+            </android.support.v7.widget.CardView>
+
+            <android.support.v7.widget.CardView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/dp_12">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:orientation="vertical"
+                    android:padding="@dimen/dp_14">
+
+                    <TextView
+                        style="@style/font_Regular_Medium"
+                        android:layout_marginTop="@dimen/dp_4"
+                        android:layout_marginBottom="@dimen/dp_12"
+                        android:text="About" />
+
+                    <TextView
+                        style="@style/font_Regular_Small"
+                        android:layout_marginTop="@dimen/dp_16"
+                        android:layout_marginBottom="@dimen/dp_2"
+                        android:text="Every business has a beginning, and this is where you talk about yours. People want to know what opportunity you saw or how your passion led to the creation of something new. Talk about your roots--people wanna know you have some."
+                        android:textColor="@color/gray" />
+
+                </LinearLayout>
+            </android.support.v7.widget.CardView>
+        </LinearLayout>
+    </ScrollView>
+</LinearLayout>

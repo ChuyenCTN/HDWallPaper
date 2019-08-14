@@ -34,6 +34,7 @@
             android:id="@+id/tv_watched_latest"
             style="@style/font_Regular_moreSmall"
             android:layout_marginLeft="@dimen/dp_4"
+            android:text="99"
             android:textColor="@color/white" />
 
         <ImageView
@@ -46,6 +47,7 @@
             android:id="@+id/tv_liked_latest"
             style="@style/font_Regular_moreSmall"
             android:layout_marginLeft="@dimen/dp_4"
+            android:text="99"
             android:textColor="@color/white" />
     </LinearLayout>
 

@@ -1,5 +1,6 @@
 package com.assignmentchuyennt.ui.category;
 
+import android.support.annotation.NonNull;
 import android.support.v4.widget.SwipeRefreshLayout;
 import android.support.v7.widget.LinearLayoutManager;
 import android.support.v7.widget.RecyclerView;
@@ -30,7 +31,7 @@ public class CategoryFragment extends BaseFragment<CategoryPresenter> implements
 
     private EndlessRecyclerOnScrollListener scrollListener;
     int page = 1;
-
+    int lastVisibleItem, totalItemCount;
 
     @Override
     protected int getIdLayout() {
@@ -43,18 +44,37 @@ public class CategoryFragment extends BaseFragment<CategoryPresenter> implements
         refreshListCategory = mView.findViewById(R.id.refresh_ListLatest);
         mPresenter = new CategoryPresenter();
         mPresenter.attachView(this);
+        final LinearLayoutManager linearLayoutManager = (LinearLayoutManager) rcvCategory.getLayoutManager();
 
         initRecycleView();
 
-        mPresenter.fetchCatgory(page, 20);
+        mPresenter.fetchCatgory(page, 6);
+        showLoading();
 
         refreshListCategory.setOnRefreshListener(new SwipeRefreshLayout.OnRefreshListener() {
             @Override
             public void onRefresh() {
+                showLoading();
                 page = 1;
                 rcvCategory.removeAllViewsInLayout();
                 adapter.clearList();
-                mPresenter.fetchCatgory(page, 20);
+                mPresenter.fetchCatgory(page, 6);
+            }
+        });
+
+        rcvCategory.addOnScrollListener(new RecyclerView.OnScrollListener() {
+            @Override
+            public void onScrollStateChanged(@NonNull RecyclerView recyclerView, int newState) {
+                super.onScrollStateChanged(recyclerView, newState);
+                if (linearLayoutManager != null) {
+                    lastVisibleItem = linearLayoutManager.findLastVisibleItemPosition();
+                }
+                totalItemCount = Integer.parseInt(String.valueOf(rcvCategory.getAdapter().getItemCount()));
+                if (!rcvCategory.canScrollVertically(1) && newState == RecyclerView.SCROLL_STATE_IDLE) {
+                    page++;
+                    mPresenter.fetchCatgory(page,6);
+
+                }
             }
         });
 

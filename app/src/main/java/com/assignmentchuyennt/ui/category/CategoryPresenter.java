@@ -22,7 +22,6 @@ public class CategoryPresenter extends BasePresenter<CategoryView> {
 
 
     public void fetchCatgory(int page, int per_page) {
-        getMvpView().showLoading();
         Retrofit retrofit = RetrofitClient.getRetrofitClient();
         APIService apiService = retrofit.create(APIService.class);
         Call call = apiService.fetchCategory(page, per_page);

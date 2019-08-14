@@ -26,6 +26,9 @@ public class AdapterListLatest extends RecyclerView.Adapter<AdapterListLatest.Vi
 
     public AdapterListLatest(List<Latest> latestList) {
         this.latestList = latestList;
+        if (this.latestList != null) {
+            this.latestList.clear();
+        }
     }
 
     @NonNull

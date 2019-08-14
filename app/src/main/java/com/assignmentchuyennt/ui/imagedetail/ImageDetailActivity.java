@@ -296,7 +296,7 @@ public class ImageDetailActivity extends BaseActivity<ImageDetailPresenter> impl
             progressBar = new ProgressDialog(ImageDetailActivity.this);
             progressBar.setMessage("Loading... Please wait...");
             progressBar.setIndeterminate(false);
-            progressBar.setCancelable(false);
+            progressBar.setCancelable(true);
             progressBar.show();
         }
 

@@ -14,7 +14,6 @@ import com.assignmentchuyennt.R;
 import com.assignmentchuyennt.ui.category.model.Category;
 import com.squareup.picasso.Picasso;
 
-import java.lang.reflect.Array;
 import java.util.List;
 
 public class AdapterListCategory extends RecyclerView.Adapter<AdapterListCategory.ViewHolder> {
@@ -32,7 +31,7 @@ public class AdapterListCategory extends RecyclerView.Adapter<AdapterListCategor
     @Override
     public ViewHolder onCreateViewHolder(@NonNull ViewGroup viewGroup, int i) {
         context = viewGroup.getContext();
-        View view = LayoutInflater.from(viewGroup.getContext()).inflate(R.layout.item_list_category, viewGroup, false);
+        View view = LayoutInflater.from(viewGroup.getContext()).inflate(R.layout.item_list_latest, viewGroup, false);
         ViewHolder viewHolder = new ViewHolder(view);
         return viewHolder;
     }
@@ -40,14 +39,8 @@ public class AdapterListCategory extends RecyclerView.Adapter<AdapterListCategor
     @Override
     public void onBindViewHolder(@NonNull ViewHolder viewHolder, int i) {
         Category category = categoryList.get(i);
-        viewHolder.tvTitleListCategory.setText(category.getName());
-        Picasso.get().load(imageList[i]).into(viewHolder.imgAvatarListCategory);
-        viewHolder.imgAvatarListCategory.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-
-            }
-        });
+        viewHolder.tvLikedLatest.setText(category.getName());
+        Picasso.get().load(imageList[i]).into(viewHolder.imgItemListLatest);
     }
 
     @Override
@@ -57,13 +50,18 @@ public class AdapterListCategory extends RecyclerView.Adapter<AdapterListCategor
 
     public class ViewHolder extends RecyclerView.ViewHolder {
 
-        private ImageView imgAvatarListCategory;
-        private TextView tvTitleListCategory;
+        private ImageView imgItemListLatest;
+        private TextView tvWatchedLatest;
+        private TextView tvLikedLatest;
+
+
 
         public ViewHolder(@NonNull View itemView) {
             super(itemView);
-            imgAvatarListCategory = (ImageView) itemView.findViewById(R.id.img_avatar_list_Category);
-            tvTitleListCategory = (TextView) itemView.findViewById(R.id.tv_title_list_Category);
+            imgItemListLatest = (ImageView) itemView.findViewById(R.id.img_item_listLatest);
+            tvWatchedLatest = (TextView) itemView.findViewById(R.id.tv_watched_latest);
+            tvLikedLatest = (TextView) itemView.findViewById(R.id.tv_liked_latest);
+
         }
     }
 

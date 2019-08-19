@@ -2,15 +2,18 @@ package com.assignmentchuyennt.ui.category;
 
 import android.support.annotation.NonNull;
 import android.support.v4.widget.SwipeRefreshLayout;
+import android.support.v7.widget.GridLayoutManager;
 import android.support.v7.widget.LinearLayoutManager;
 import android.support.v7.widget.RecyclerView;
 import android.view.View;
 import android.widget.Toast;
 
 import com.assignmentchuyennt.R;
+import com.assignmentchuyennt.common.SpacesItemDecoration;
 import com.assignmentchuyennt.ui.base.BaseFragment;
 import com.assignmentchuyennt.ui.category.adapter.AdapterListCategory;
 import com.assignmentchuyennt.ui.category.model.Category;
+import com.assignmentchuyennt.ui.latest.apdater.AdapterListLatest;
 import com.assignmentchuyennt.widget.EndlessRecyclerOnScrollListener;
 
 import java.util.ArrayList;
@@ -108,8 +111,10 @@ public class CategoryFragment extends BaseFragment<CategoryPresenter> implements
 
     void initRecycleView() {
         adapter = new AdapterListCategory(categoryList);
-        rcvCategory.setLayoutManager(new LinearLayoutManager(getContext()));
+        rcvCategory.setLayoutManager(new GridLayoutManager(getContext(),2));
+        rcvCategory.addItemDecoration(new SpacesItemDecoration(2, 20, false));
         rcvCategory.setAdapter(adapter);
+
     }
 
 

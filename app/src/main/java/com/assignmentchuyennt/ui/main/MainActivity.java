@@ -46,7 +46,7 @@ public class MainActivity extends AppCompatActivity
         toggle.syncState();
         navigationView.setNavigationItemSelectedListener(this);
         toolbar.setTitle(getResources().getString(R.string.title_Latest));
-        fragment = new LatestFragment();
+        fragment = new CategoryFragment();
         showFragment(fragment);
         imgSearch.setVisibility(View.GONE);
     }

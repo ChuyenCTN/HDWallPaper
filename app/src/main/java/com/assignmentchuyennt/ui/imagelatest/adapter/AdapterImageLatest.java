@@ -15,6 +15,7 @@ import com.assignmentchuyennt.ui.imagelatest.model.ListImageLatets;
 import com.assignmentchuyennt.ui.latest.apdater.ItemClick;
 import com.squareup.picasso.Picasso;
 
+import java.util.ArrayList;
 import java.util.List;
 
 public class AdapterImageLatest extends RecyclerView.Adapter<AdapterImageLatest.ViewHolder> {
@@ -32,7 +33,7 @@ public class AdapterImageLatest extends RecyclerView.Adapter<AdapterImageLatest.
     }
 
     public AdapterImageLatest(List<ListImageLatets> imageLatetsList, int TYPE) {
-        this.imageLatetsList = imageLatetsList;
+        this.imageLatetsList = new ArrayList<>();
         this.TYPE = TYPE;
     }
 

@@ -21,5 +21,4 @@ public interface APIService {
     Call<List<ListImageLatets>> getListImageLatest(
             @Query("parent") String parent);
 
-
 }
